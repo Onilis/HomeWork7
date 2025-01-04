@@ -1,16 +1,21 @@
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("Задача №1 ");
         int accumulation = 15000;
         int totalAmount = 2_459_000;
-        int onlyMonths;
-        while (accumulation <= totalAmount) {
-            onlyMonths = totalAmount / accumulation;
-            System.out.println("Месяц " + onlyMonths + " сумма накоплений равна " + totalAmount + " рублей");
-            break;
+        int onlyMonths = 0;
+        double percent = 1D / 100;
+        int summa = 0;
+        while (summa < totalAmount) {
+            summa += accumulation;
+            summa = (int) (summa * (1 + percent));
+            onlyMonths++;
+            System.out.println("Месяц " + onlyMonths + " сумма накоплений равна " + summa + " рублей");
         }
         System.out.println();
 
+        System.out.println("Задача № 2 ");
         int number = 0;
         while (number <= 9) {
             number++;
@@ -24,17 +29,20 @@ public class Main {
         System.out.println();
 
 
+
+        System.out.println("Задача № 3 ");
         long initialPopulation = 12000000;
-        double growthRatePer1000 = 9;
-        int years = 10;
-        long currentPopulation = initialPopulation;
-        int year = 0;
-        while (year < years) {
-            year++;
-            long growthRate = (long) (currentPopulation * growthRatePer1000 / 1000);
-            currentPopulation += growthRate;
-            System.out.println("Год " + year + ", численость населения состовляет " + currentPopulation);
+        int natality1000 = 17;
+        int mortality1000 = 8;
+        int year = 2025;
+        for (int i = year; i < year + 10 ; i++) {
+            initialPopulation += initialPopulation * natality1000 / 1000 - initialPopulation * mortality1000 / 1000;
+            System.out.println("Год " + year + ", численость населения состовляет " + initialPopulation);
         }
+
+        System.out.println();
+
+        System.out.println("Задача № 4 ");
         double initialDeposit = 15000;
         double targetAmount = 12000000;
         double monthlyInterestRate = 0.07;
@@ -46,9 +54,8 @@ public class Main {
             System.out.println("Накопления за " + months + " месяц, составили " + totalSavings);
         }
         System.out.println();
-        System.out.println();
 
-
+        System.out.println("Задача № 5 ");
         double initialDeposit1 = 15000;
         double targetAmount1 = 12000000;
         double monthlyInterestRate1 = 0.07;
@@ -62,8 +69,8 @@ public class Main {
             }
         }
         System.out.println();
-        System.out.println();
 
+        System.out.println("Задача № 6 ");
         double initialDeposit2 = 15000;
         double monthlyInterestRate2 = 0.07;
         double totalSavings2 = initialDeposit2;
@@ -77,8 +84,8 @@ public class Main {
             }
         }
         System.out.println();
-        System.out.println();
 
+        System.out.println("Задача № 7 ");
         int friday = 5;
         int month = 31;
         System.out.println("Сегодня пятница " + friday + " число.");
@@ -90,9 +97,8 @@ public class Main {
             }
         }
         System.out.println();
-        System.out.println();
 
-
+        System.out.println("Задача № 8 ");
         int present = 2025;
         int age = 0;
         int past = present - 200;

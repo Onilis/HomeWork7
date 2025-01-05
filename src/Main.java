@@ -104,15 +104,11 @@ public class Main {
         int past = present - 200;
         int future = present + 100;
         int comet = 79;
-        while (age < present) {
-            comet += age;
-            while (age <= future) {
-                age += comet;
-                if (age >= past & age <= future) {
-                    System.out.println(age);
-                }
+        while (age < future) {
+            age += comet;
+            if ( age > past & age < future) {
+                System.out.println(age);
             }
-
         }
     }
 }

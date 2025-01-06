@@ -29,13 +29,12 @@ public class Main {
         System.out.println();
 
 
-
         System.out.println("Задача № 3 ");
         long initialPopulation = 12000000;
         int natality1000 = 17;
         int mortality1000 = 8;
         int year = 2025;
-        for (int i = year; i < year + 10 ; i++) {
+        for (int i = year; i < year + 10; i++) {
             initialPopulation += initialPopulation * natality1000 / 1000 - initialPopulation * mortality1000 / 1000;
             System.out.println("Год " + year + ", численость населения состовляет " + initialPopulation);
         }
@@ -106,9 +105,20 @@ public class Main {
         int comet = 79;
         while (age < future) {
             age += comet;
-            if ( age > past & age < future) {
+            if (age > past & age < future) {
                 System.out.println(age);
             }
+        }
+
+        int child = 6;
+        if (child < 5) {
+            System.out.println(" Если возраст ребенка равен " + child + " то ему нельзя кататься на аттракционе. ");
+        }
+        if (child > 5 && child <= 14) {
+            System.out.println(" Если возраст ребенка равен " + child + " то ему можно кататься на аттракционе в сопровождении. ");
+        }
+        if (child > 14) {
+            System.out.println(" Если возраст ребенка равен " + child + " то ему можно кататься без сопровождения взрослого. ");
         }
     }
 }

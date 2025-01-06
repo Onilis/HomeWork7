@@ -1,124 +1,81 @@
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("Задача №1 ");
-        int accumulation = 15000;
-        int totalAmount = 2_459_000;
-        int onlyMonths = 0;
-        double percent = 1D / 100;
-        int summa = 0;
-        while (summa < totalAmount) {
-            summa += accumulation;
-            summa = (int) (summa * (1 + percent));
-            onlyMonths++;
-            System.out.println("Месяц " + onlyMonths + " сумма накоплений равна " + summa + " рублей");
+        System.out.println("\nTask 1");
+        int human = 18;
+        if (human >= 18) {
+            System.out.println("Он совершеннолетний");
+        } else {
+            System.out.println("Он не совершеннолетний,стоит подождать");
         }
-        System.out.println();
-
-        System.out.println("Задача № 2 ");
-        int number = 0;
-        while (number <= 9) {
-            number++;
-            System.out.print(number + " ");
+        System.out.println("\nTask 2");
+        int gold = 5;
+        if (gold <= 5) {
+            System.out.println("На улице холодно,надень шапку");
+        } else {
+            System.out.println("Можно идти без шапки");
         }
-        System.out.println();
-        for (int i = 10; i >= 1; i--) {
-            System.out.print(i + " ");
+        System.out.println("\nTask 3");
+        int speed = 60;
+        if (speed >= 60 && speed <= 55) {
+            System.out.println("Высокая скорость,придет заплатить штраф");
+        } else {
+            System.out.println("Можно ездить спокойно");
         }
-        System.out.println();
-        System.out.println();
-
-
-        System.out.println("Задача № 3 ");
-        long initialPopulation = 12000000;
-        int natality1000 = 17;
-        int mortality1000 = 8;
-        int year = 2025;
-        for (int i = year; i < year + 10; i++) {
-            initialPopulation += initialPopulation * natality1000 / 1000 - initialPopulation * mortality1000 / 1000;
-            System.out.println("Год " + year + ", численость населения состовляет " + initialPopulation);
+        System.out.println("\nTask 4");
+        int age = 20;
+        if (age >= 2 && age <= 6) {
+            System.out.println(" Если возраст человека равен " + age + " то стоит ходить в садик");
         }
-
-        System.out.println();
-
-        System.out.println("Задача № 4 ");
-        double initialDeposit = 15000;
-        double targetAmount = 12000000;
-        double monthlyInterestRate = 0.07;
-        double totalSavings = initialDeposit;
-        int months = 0;
-        while (totalSavings < targetAmount) {
-            months++;
-            totalSavings *= (1 + monthlyInterestRate);
-            System.out.println("Накопления за " + months + " месяц, составили " + totalSavings);
+        if (age >= 7 && age <= 17) {
+            System.out.println(" Если возраст человека равен " + age + " то стоит ходить в школу");
         }
-        System.out.println();
-
-        System.out.println("Задача № 5 ");
-        double initialDeposit1 = 15000;
-        double targetAmount1 = 12000000;
-        double monthlyInterestRate1 = 0.07;
-        double totalSavings1 = initialDeposit1;
-        int months1 = 0;
-        while (totalSavings1 < targetAmount1) {
-            months1++;
-            totalSavings1 *= (1 + monthlyInterestRate1);
-            if (months1 % 6 == 0) {
-                System.out.println("Накопления за " + months1 + " месяц, составили " + totalSavings1);
-            }
+        if (age >= 18 && age <= 24) {
+            System.out.println(" Если возраст человека равен " + age + " то стоит ходить в университет");
         }
-        System.out.println();
-
-        System.out.println("Задача № 6 ");
-        double initialDeposit2 = 15000;
-        double monthlyInterestRate2 = 0.07;
-        double totalSavings2 = initialDeposit2;
-        int months2 = 0;
-        int totalMonths2 = 9 * 12;
-        while (months2 < totalMonths2) {
-            months2++;
-            totalSavings2 *= (1 + monthlyInterestRate2);
-            if (months2 % 6 == 0) {
-                System.out.println("Накопления за " + months2 + " месяц, составили " + totalSavings2);
-            }
+        if (age > 24) {
+            System.out.println(" Если возраст человека равен " + age + " то стоит ходить на работу");
         }
-        System.out.println();
-
-        System.out.println("Задача № 7 ");
-        int friday = 5;
-        int month = 31;
-        System.out.println("Сегодня пятница " + friday + " число.");
-        while (friday <= month) {
-            friday += 7;
-            if (friday > month) {
+        System.out.println("\nTask 5");
+        int limiter = 6;
+        if (limiter <= 5) {
+            System.out.println("Если возраст ребенка " + limiter + " то ему нельзя кататься на ауттракционе");
+        }
+        if (limiter >= 5 && limiter <= 14) {
+            System.out.println("Если возраст ребенка " + limiter + " то он может кататься с сопровождением взрослого");
+        }
+        if (limiter > 14) {
+            System.out.println("Если возраст ребенка " + limiter + " то он может кататься без взрослого ");
+        }
+        System.out.println("\nTask 6");
+        int carriage = 102;
+        int seating = 60;
+        int standing = carriage - seating;
+        if (standing >= 0) {
+            System.out.println("Не хватает мест: " + standing + " места.");
+            int people = 144;
+            int capacity = 102;
+            if (people <= capacity) {
+                System.out.println(" Есть свободные места в вагоне.");
             } else {
-                System.out.println("Сегодня пятница " + friday + " число.");
+                int excess = people - capacity;
+                System.out.println("В вагоне недостаточно мест. Необходимо еще " + excess + " мест.");
             }
+        } else {
+            System.out.println("Все пассажиры смогут разместиться в вагоне.");
         }
-        System.out.println();
+        System.out.println("\nTask 7");
 
-        System.out.println("Задача № 8 ");
-        int present = 2025;
-        int age = 0;
-        int past = present - 200;
-        int future = present + 100;
-        int comet = 79;
-        while (age < future) {
-            age += comet;
-            if (age > past & age < future) {
-                System.out.println(age);
-            }
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int max;
+        if (a >= b && a >= c) {
+            max = a;
+        } else if (b >= a && b >= c) {
+            max = b;
+        } else {
+            max = c;
         }
-
-        int child = 6;
-        if (child < 5) {
-            System.out.println(" Если возраст ребенка равен " + child + " то ему нельзя кататься на аттракционе. ");
-        }
-        if (child > 5 && child <= 14) {
-            System.out.println(" Если возраст ребенка равен " + child + " то ему можно кататься на аттракционе в сопровождении. ");
-        }
-        if (child > 14) {
-            System.out.println(" Если возраст ребенка равен " + child + " то ему можно кататься без сопровождения взрослого. ");
-        }
+        System.out.println("Максимальное число: " + max);
     }
 }
